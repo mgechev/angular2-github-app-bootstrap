@@ -17,7 +17,7 @@ Congratulations! Now you already have a working Angular 2 application! You can t
 
 The result should be as follows:
 
-![]()
+![Step 1](/assets/step1.png)
 
 ## Part 2
 
@@ -42,6 +42,8 @@ The result should be as follows:
 
 
 Awesome! The second part is completed! If you haven't stopped `gulp serve.dev` just save the files you changed and refresh `http://localhost:5555` in order to see the functionality you just implemented!
+
+![Step 2](/assets/step2.png)
 
 ## Part 3
 
@@ -68,4 +70,4 @@ Did you notice that when you click on any of the users in the list on the right-
 
 Thats it. You're done with this excercise! You can try it the same way you tried "Part 2"! Congratulations! Here is what you should see as final result:
 
-![]()
+![Step 3](/assets/step3.png)
