@@ -19,12 +19,10 @@ export class Home {
     this.selectedUser = null;
   }
   addUser(currentUser) {
-    this.users.push(currentUser);
+    this.users.push(currentUser.value);
+    currentUser.value = '';
   }
   removeUser(user) {
-    if (this.selectedUser && this.selectedUser.login === user) {
-      this.selectedUser = null;
-    }
     this.users.splice(this.users.indexOf(user), 1);
   }
   private getUser(u:string) {

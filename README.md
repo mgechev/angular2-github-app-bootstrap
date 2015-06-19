@@ -49,10 +49,10 @@ Did you notice that when you click on any of the users in the list on the right-
 
 - Inside `home.ts` import the `UserDetails` component, which is located inside `../../components/user-details/UserDetails` and add it as dependency of the `Home` component.
 - Define a method called `selectUser(user:string)`, which implements the following logic:
-  - It sets the `selectedUser` to null
+  - Sets the `selectedUser` to `null`
   - Sets the `loading` status to true
-  - Invokes the `getUser` method with the `user` passed as argument. `getUser` will return a promise, add handler to the `then` method of the returned promise. The handler should accept a single argument - the user, which we got from the GitHub's API. Inside the callback simply set the value of the `selectedUser` and change the `loading` status to false.
-- Inside the template of the `Home` component add `*ng-if` directive to the `.spinner` element with value `loading` (i.e. the element should be visible when the `loading` status is `true`).
+  - Invokes the `getUser` method with the current `user` passed as argument. `getUser` will return a promise, add handler to the `then` method of the returned promise. The handler should accept a single argument - the user, which we got from the GitHub's API. Inside the callback simply set the value of the `selectedUser` and change the `loading` status to false.
+- Inside the template of the `Home` component uncomment the lines in the bottom and add `*ng-if` directive to the `.spinner` element with value `loading` (i.e. the element should be visible when the `loading` status is `true`).
 - In to the `user-details` component add two attributes:
   - `[user]` attribute, which should point to the current `selectedUser`
   - `*ng-if` attribute (directive), which should has as value the following boolean expression: `selectedUser !== null`.
