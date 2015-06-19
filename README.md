@@ -1,6 +1,8 @@
-Sample Angular 2 application, which communicates with GitHub's API.
+# Exercise
 
-TODO:
+Exercise for building simple Angular 2 apps. This Tutorial is based on Angular 2 alpha27, in order to try it just clone the repo and follow the steps.
+
+If you get stuck on Step 1 or Step 2, you can use the branches `step1`, `step2` to see the solutions.
 
 ## Part 1
 
@@ -71,3 +73,7 @@ Did you notice that when you click on any of the users in the list on the right-
 Thats it. You're done with this excercise! You can try it the same way you tried "Part 2"! Congratulations! Here is what you should see as final result:
 
 ![Step 3](/assets/step3.png)
+
+# License
+
+MIT
