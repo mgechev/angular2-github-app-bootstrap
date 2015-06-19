@@ -73,9 +73,13 @@ Did you notice that when you click on any of the users in the list on the right-
     - {{user.public_repos}}
 - As last step, in order to provide slightly better user experience, inside the `removeUser` method in the `Home` component set the value of the `selectedUser` to `null` if it is equal to the user we want to remove.
 
-Thats it. You're done with this excercise! You can try it the same way you tried "Step 2"! Congratulations! Here is what you should see as final result:
+Thats it. You're done with this exercise! You can try it the same way you tried "Step 2"! Congratulations! Here is what you should see as final result:
 
 ![Step 3](/assets/step3.png)
+
+# Contributions
+
+This is the first iteration of the readme so there might be some typos, mistakes or tasks, which are not quite clear or too verbose. If you think you can improve the quality of the document just fork the repo and initiate a pull request!
 
 # License
 
