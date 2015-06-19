@@ -1,7 +1,8 @@
 import {Component, View} from 'angular2/angular2';
 
 @Component({
-  selector: 'user-details'
+  selector: 'user-details',
+  properties: ['user']
 })
 @View({
   templateUrl: './components/user-details/user-details.html?v=<% VERSION %>'
@@ -9,5 +10,6 @@ import {Component, View} from 'angular2/angular2';
 export class UserDetails {
   user:any;
   constructor() {
+    console.log(this);
   }
 }
