@@ -2,9 +2,12 @@
 
 Exercise for building simple Angular 2 apps. This Tutorial is based on Angular 2 alpha27, in order to try it just clone the repo and follow the steps.
 
-If you get stuck on Step 1 or Step 2, you can use the branches [`step1`](https://github.com/mgechev/angular2-github-app-bootstrap/tree/step1), [`step2`](https://github.com/mgechev/angular2-github-app-bootstrap/tree/step2) to see the solutions.
+If you get stuck on Step 1 or Step 2, you can use the branches:
+- [`step1`](https://github.com/mgechev/angular2-github-app-bootstrap/tree/step1)
+- [`step2`](https://github.com/mgechev/angular2-github-app-bootstrap/tree/step2)
+- [`step3`](https://github.com/mgechev/angular2-github-app-bootstrap/tree/step3)
 
-## Part 1
+## Step 1
 
 - Inside `init.ts` import the module `app`, which is located in the same directory. You can point it using its relative location.
 - Name the `app/app.ts` component, using the selector property of the [component annotation](https://angular.io/docs/js/latest/api/annotations/ComponentAnnotation-class.html) `app`.
@@ -21,7 +24,7 @@ The result should be as follows:
 
 ![Step 1](/assets/step1.png)
 
-## Part 2
+## Step 2
 
 - Inside `app/app.ts` import the `home` component and add it as dependency of the `App` component.
   - The home component is located inside the directory `components/home`. You can use its relative path.
@@ -43,11 +46,11 @@ The result should be as follows:
   - `removeUser(user)` should remove the given user from the `users` array.
 
 
-Awesome! The second part is completed! If you haven't stopped `gulp serve.dev` just save the files you changed and refresh `http://localhost:5555` in order to see the functionality you just implemented!
+Awesome! The second step is completed! If you haven't stopped `gulp serve.dev` just save the files you changed and refresh `http://localhost:5555` in order to see the functionality you just implemented!
 
 ![Step 2](/assets/step2.png)
 
-## Part 3
+## Step 3
 
 Did you notice that when you click on any of the users in the list on the right-hand side of the screen an error occurs? Now we're going to fix this!
 
@@ -70,7 +73,7 @@ Did you notice that when you click on any of the users in the list on the right-
     - {{user.public_repos}}
 - As last step, in order to provide slightly better user experience, inside the `removeUser` method in the `Home` component set the value of the `selectedUser` to `null` if it is equal to the user we want to remove.
 
-Thats it. You're done with this excercise! You can try it the same way you tried "Part 2"! Congratulations! Here is what you should see as final result:
+Thats it. You're done with this excercise! You can try it the same way you tried "Step 2"! Congratulations! Here is what you should see as final result:
 
 ![Step 3](/assets/step3.png)
 
