@@ -1,0 +1,40 @@
+<div class="container">
+  <section class="col-md-7">
+    <!-- Form Name -->
+    <legend>GitHub User</legend>
+
+    <!-- Text input-->
+    <div class="control-group">
+      <label class="control-label" for="user-input">GitHub user</label>
+      <div class="controls">
+        <input id="user-input" name="user-input" type="text" placeholder="enter github username here..." class="input-xlarge" required>
+        <button class="btn btn-primary">Add</button>
+      </div>
+    </div>
+  </section>
+  <div class="col-md-5" *ng-if="users.length > 0">
+    <legend>All Users</legend>
+    <table class="table table-striped">
+      <thead>
+        <th>Username</th>
+        <th>Remove</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="javascript:void(0);"></a></td>
+          <td>
+            <button class="btn btn-danger">×</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class="spinner" *ng-if="loading"></div>
+  <user-details
+    [user]="selectedUser"
+    *ng-if="selectedUser !== null">
+  </user-details>
+</div>
