@@ -39,17 +39,6 @@ var Home = (function () {
             });
         }
     };
-    Home.prototype.selectUser = function (user) {
-        var _this = this;
-        this.selectedUser = null;
-        this.loading = true;
-        this.getUser(user)
-            .then(function (u) {
-            console.log(u);
-            _this.selectedUser = u;
-            _this.loading = false;
-        });
-    };
     Home = __decorate([
         angular2_1.Component({
             selector: 'home'

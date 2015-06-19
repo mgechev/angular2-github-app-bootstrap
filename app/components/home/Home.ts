@@ -41,14 +41,4 @@ export class Home {
         });
     }
   }
-  selectUser(user:string) {
-    this.selectedUser = null;
-    this.loading = true;
-    this.getUser(user)
-      .then((u) => {
-        console.log(u);
-        this.selectedUser = u;
-        this.loading = false;
-      });
-  }
 }

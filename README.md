@@ -43,4 +43,29 @@ The result should be as follows:
 
 Awesome! The second part is completed! If you haven't stopped `gulp serve.dev` just save the files you changed and refresh `http://localhost:5555` in order to see the functionality you just implemented!
 
+## Part 3
 
+Did you notice that when you click on any of the users in the list on the right-hand side of the screen an error occurs? Now we're going to fix this!
+
+- Inside `home.ts` import the `UserDetails` component, which is located inside `../../components/user-details/UserDetails` and add it as dependency of the `Home` component.
+- Define a method called `selectUser(user:string)`, which implements the following logic:
+  - It sets the `selectedUser` to null
+  - Sets the `loading` status to true
+  - Invokes the `getUser` method with the `user` passed as argument. `getUser` will return a promise, add handler to the `then` method of the returned promise. The handler should accept a single argument - the user, which we got from the GitHub's API. Inside the callback simply set the value of the `selectedUser` and change the `loading` status to false.
+- Inside the template of the `Home` component add `*ng-if` directive to the `.spinner` element with value `loading` (i.e. the element should be visible when the `loading` status is `true`).
+- In to the `user-details` component add two attributes:
+  - `[user]` attribute, which should point to the current `selectedUser`
+  - `*ng-if` attribute (directive), which should has as value the following boolean expression: `selectedUser !== null`.
+- Open `UserDetails.ts` and add the property `properties` to the object passed to the `Component` annotation's call. It should be an array with a single value `'user'`. This way we state that we want to be able to pass properties to our `UserDetails` component using the `[user]` attribute.
+- Now open `user-details.html` and make the following additions:
+  - Add property called `[src]` to the `img` element. It should point to the `user.avatar_url`.
+  - To each second cell (i.e. the cells next to the labels "Username", "Followers", "Following", etc) add the following attributes using the interpolation directive:
+    - {{user.login}}
+    - {{user.followers}}
+    - {{user.following}}
+    - {{user.public_repos}}
+- As last step, in order to provide slightly better user experience, inside the `removeUser` method in the `Home` component set the value of the `selectedUser` to `null` if it is equal to the user we want to remove.
+
+Thats it. You're done with this excercise! You can try it the same way you tried "Part 2"! Congratulations! Here is what you should see as final result:
+
+![]()

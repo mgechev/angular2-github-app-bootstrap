@@ -32,9 +32,7 @@
 </div>
 <br>
 <div class="container">
-  <div class="spinner" *ng-if="loading"></div>
-  <user-details
-    [user]="selectedUser"
-    *ng-if="selectedUser !== null">
+  <div class="spinner"></div>
+  <user-details>
   </user-details>
 </div>
