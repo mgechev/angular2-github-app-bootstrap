@@ -7,8 +7,8 @@
     <div class="control-group">
       <label class="control-label" for="user-input">GitHub user</label>
       <div class="controls">
-        <input id="user-input" name="user-input" type="text" placeholder="enter github username here..." class="input-xlarge" required>
-        <button class="btn btn-primary">Add</button>
+        <input #currentuser id="user-input" name="user-input" type="text" placeholder="enter github username here..." class="input-xlarge" required>
+        <button (click)="addUser(currentuser)" class="btn btn-primary">Add</button>
       </div>
     </div>
   </section>
@@ -20,10 +20,10 @@
         <th>Remove</th>
       </thead>
       <tbody>
-        <tr>
-          <td><a href="javascript:void(0);"></a></td>
+        <tr *ng-for="#user of users">
+          <td><a (click)="selectUser(user)" href="javascript:void(0);">{{user}}</a></td>
           <td>
-            <button class="btn btn-danger">×</button>
+            <button (click)="removeUser(user)" class="btn btn-danger">×</button>
           </td>
         </tr>
       </tbody>
