@@ -30,7 +30,7 @@ The result should be as follows:
 - Add selector property for the `Home` component with value `home`.
 - Inside `app/app.html` add the `Home` component using an element selector with element name `home` (remove the `Hello Angular2!` heading).
 - Define a property called `users` of the `Home` class, it should be of type `string[]` and inside the constructor of `Home` it should be initialized with an empty array.
-- Open the template associated to the `Home` component and make the following changes:
+- Open the template associated with the `Home` component and make the following changes:
   - Add property called `#currentuser` to the input with id `user-input`. This way you'll be able to reference it using `currentuser`.
   - Add a click handler to the button next to the input. The click event should call the method `addUser` with the `currentuser` text input
   - Add `*ng-for` directive to the first `tr` element inside the body of the table under the `All Users` legend. It should loop over all `users` and display their name inside the link in the first cell (note: you can use the interpolate directive `{{ }}`).

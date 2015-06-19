@@ -1,15 +1,10 @@
 /// <reference path="../../../typings/tsd.d.ts" />
-import {Component, View, NgFor, NgIf} from 'angular2/angular2';
 
 @Component({
-  selector: 'home'
 })
 @View({
-  templateUrl: './components/home/home.html?v=<%= VERSION %>',
-  directives: [NgFor, NgIf]
 })
 export class Home {
-  users:string[];
   cache:any;
   loading:boolean;
   selectedUser:any;
@@ -19,11 +14,8 @@ export class Home {
     this.selectedUser = null;
   }
   addUser(currentUser) {
-    this.users.push(currentUser.value);
-    currentUser.value = '';
   }
   removeUser(user) {
-    this.users.splice(this.users.indexOf(user), 1);
   }
   private getUser(u:string) {
     if (this.cache[u]) {
