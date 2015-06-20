@@ -11,8 +11,8 @@ If you get stuck on any of the steps you can use the following branches, which c
 
 - Inside `init.ts` import the module `app`, which is located in the same directory. You can point it using its relative location.
 - Name the `app/app.ts` component, using the selector property of the [component annotation](https://angular.io/docs/js/latest/api/annotations/ComponentAnnotation-class.html) `app`.
-- Inside the `View` annotation add property `templateUrl`, which should points to the app component's template.
-- Inside the app component's template add the following markup:
+- Inside the `View` annotation add property `templateUrl`, which should point to the app component's template.
+- Inside the `app` component's template add the following markup:
 
 ```html
 <h1>Hello Angular2!</h1>
