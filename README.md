@@ -65,11 +65,11 @@ Did you notice that when you click on any of the users in the list on the right-
 - Open `UserDetails.ts` and add the property `properties` to the object passed to the `Component` annotation's call. It should be an array with a single value `'user'`. This way we state that we want to be able to pass properties to our `UserDetails` component using the `[user]` attribute.
 - Now open `user-details.html` and make the following additions:
   - Add property called `[src]` to the `img` element. It should point to the `user.avatar_url`.
-  - To each second cell (i.e. the cells next to the labels "Username", "Followers", "Following", etc) add the following attributes using the interpolation directive:
-    - {{user.login}}
-    - {{user.followers}}
-    - {{user.following}}
-    - {{user.public_repos}}
+  - To each second cell (i.e. the cells next to the labels "Username", "Followers", "Following", etc.) add the following attributes using the interpolation directive:
+    - `{{user.login}}`
+    - `{{user.followers}}`
+    - `{{user.following}}`
+    - `{{user.public_repos}}`
 - As last step, in order to provide slightly better user experience, inside the `removeUser` method in the `Home` component set the value of the `selectedUser` to `null` if it is equal to the user we want to remove.
 
 Thats it. You're done with this exercise! You can try it the same way you tried "Step 2"! Congratulations! Here is what you should see as final result:
@@ -78,7 +78,7 @@ Thats it. You're done with this exercise! You can try it the same way you tried 
 
 # Contributions
 
-This is the first iteration of the readme so there might be some typos, mistakes or tasks, which are not quite clear or too verbose. If you think you can improve the quality of the document just fork the repo and initiate a pull request!
+This is the first iteration of the readme so there might be some typos, mistakes or tasks, which are not quite clear or too verbose. If you think you can improve the quality of the document just fork the repo and initiate a pull request, it will be greatly appreciated!
 
 # License
 
