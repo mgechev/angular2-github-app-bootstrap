@@ -20,7 +20,8 @@ export class Home {
     this.selectedUser = null;
   }
   addUser(currentUser) {
-    this.users.push(currentUser);
+    this.users.push(currentUser.value);
+    currentUser.value = '';
   }
   removeUser(user) {
     if (this.selectedUser && this.selectedUser.login === user) {
