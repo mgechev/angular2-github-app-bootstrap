@@ -1,8 +1,8 @@
 # Exercise
 
-Exercise for building simple Angular 2 apps. This tutorial is based on Angular 2 alpha27. In order to try it just clone the repo and follow the steps.
+Exercise learning the foundations of Angular 2. This tutorial is based on Angular 2 alpha27 and the [angular2-seed](https://github.com/mgechev/angular2-seed). In order to try it just clone the repo and follow the steps.
 
-If you get stuck on any of the steps you can use the following branches, which contain the end solution:
+If you get stuck on any of the steps you can use the following branches, which contain the final solution for given chapter:
 - [`step1`](https://github.com/mgechev/angular2-github-app-bootstrap/tree/step1)
 - [`step2`](https://github.com/mgechev/angular2-github-app-bootstrap/tree/step2)
 - [`step3`](https://github.com/mgechev/angular2-github-app-bootstrap/tree/step3)
@@ -12,7 +12,7 @@ If you get stuck on any of the steps you can use the following branches, which c
 - Inside `init.ts` import the module `app`, which is located in the same directory. You can point it using its relative location.
 - Name the `app/app.ts` component, using the selector property of the [component annotation](https://angular.io/docs/js/latest/api/annotations/ComponentAnnotation-class.html) `app`.
 - Inside the `View` annotation add property `templateUrl`, which should point to the app component's template.
-- Inside the `app` component's template add the following markup:
+- Inside the `App` component's template add the following markup:
 
 ```html
 <h1>Hello Angular2!</h1>
