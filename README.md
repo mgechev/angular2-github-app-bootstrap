@@ -1,8 +1,8 @@
 # Exercise
 
-Exercise for building simple Angular 2 apps. This Tutorial is based on Angular 2 alpha27, in order to try it just clone the repo and follow the steps.
+Exercise for building simple Angular 2 apps. This tutorial is based on Angular 2 alpha27. In order to try it just clone the repo and follow the steps.
 
-If you get stuck on Step 1 or Step 2, you can use the branches:
+If you get stuck on any of the steps you can use the following branches, which contain the end solution:
 - [`step1`](https://github.com/mgechev/angular2-github-app-bootstrap/tree/step1)
 - [`step2`](https://github.com/mgechev/angular2-github-app-bootstrap/tree/step2)
 - [`step3`](https://github.com/mgechev/angular2-github-app-bootstrap/tree/step3)
