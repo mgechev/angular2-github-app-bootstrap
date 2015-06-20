@@ -10,8 +10,8 @@ If you get stuck on any of the steps you can use the following branches, which c
 ## Step 1
 
 - Inside `init.ts` import the module `app`, which is located in the same directory. You can point it using its relative location.
-- Name the `app/app.ts` component, using the selector property of the [component annotation](https://angular.io/docs/js/latest/api/annotations/ComponentAnnotation-class.html) `app`.
-- Inside the `View` annotation add property `templateUrl`, which should point to the app component's template.
+- Name the `app/app.ts` component `app`, using the selector property of the [component annotation](https://angular.io/docs/js/latest/api/annotations/ComponentAnnotation-class.html).
+- Inside the `View` annotation add property `templateUrl`, which should point to the `app` component's template.
 - Inside the `App` component's template add the following markup:
 
 ```html
@@ -28,23 +28,22 @@ The result should be as follows:
 
 - Inside `app/app.ts` import the `home` component and add it as dependency of the `App` component.
   - The home component is located inside the directory `components/home`. You can use its relative path.
-  - All views accept directives as dependencies. You can define that the `App` component requires `Home` as dependency by adding the `directive` property of the component annotation. The directive property accepts an array of directives as value.
+  - All views accept directives as dependencies. You can define that the `App` component requires `Home` as dependency by adding the `directive` property of the object passed to the component annotation. The directive property accepts an array of directives as value.
 - Inside `home.ts` import the following annotations and directives from the module `angular2/angular2`: `Component`, `View`, `NgFor`, `NgIf`.
 - Add `NgFor` and `NgIf` as dependencies of the `Home` component, the same way you added `Home` as dependency for the `App` component.
 - Add `templateUrl` property for the `Home` component, which points to the appropriate location.
-- Add selector property for the `Home` component with value `home`.
-- Inside `app/app.html` add the `Home` component using an element selector with element name `home` (remove the `Hello Angular2!` heading).
+- Add property called `selector` with value `home` to the object passed to the component annotation of the `Home` component.
+- Inside `app/app.html` add the `Home` component using `home` element (remove the `Hello Angular2!` heading).
 - Define a property called `users` of the `Home` class, it should be of type `string[]` and inside the constructor of `Home` it should be initialized with an empty array.
 - Open the template associated with the `Home` component and make the following changes:
-  - Add property called `#currentuser` to the input with id `user-input`. This way you'll be able to reference it using `currentuser`.
+  - Add property called `#currentuser` to the input with id `user-input`. This way you'll be able to reference the input using `currentuser`.
   - Add a click handler to the button next to the input. The click event should call the method `addUser` with the `currentuser` text input
   - Add `*ng-for` directive to the first `tr` element inside the body of the table under the `All Users` legend. It should loop over all `users` and display their name inside the link in the first cell (note: you can use the interpolate directive `{{ }}`).
-  - To the link inside the first cell add a click handler. Once a click event occurs the `selectUser` method should be invoked with the current user as argument.
+  - To the link inside the first cell add a click handler. Once a click event occurs the `selectUser` method should be invoked with the `currentuser` as argument.
   - To the button inside the second cell add a click handler, once a click event occurs invoke the `removeUser` method with the current user as argument.
 - Now open the `Home` component and implement the methods `addUser`, `removeUser` as follows:
   - `addUser(user)` should add the new user to the list of users (i.e. `users` array). Optionally you can restrict the `addUser` operation to only not existing users. Do not forget to reset the value of the `currentuser` input once you add it to the list of users.
   - `removeUser(user)` should remove the given user from the `users` array.
-
 
 Awesome! The second step is completed! If you haven't stopped `gulp serve.dev` just save the files you changed and refresh `http://localhost:5555` in order to see the functionality you just implemented!
 
@@ -52,13 +51,13 @@ Awesome! The second step is completed! If you haven't stopped `gulp serve.dev` j
 
 ## Step 3
 
-Did you notice that when you click on any of the users in the list on the right-hand side of the screen an error occurs? Now we're going to fix this!
+Did you notice that when you click on any of the users in the list on the right-hand side of the screen an error occurred? Now we're going to fix this!
 
 - Inside `home.ts` import the `UserDetails` component, which is located inside `../../components/user-details/UserDetails` and add it as dependency of the `Home` component.
 - Define a method called `selectUser(user:string)`, which implements the following logic:
-  - Sets the `selectedUser` to `null`
-  - Sets the `loading` status to true
-  - Invokes the `getUser` method with the current `user` passed as argument. `getUser` will return a promise, add handler to the `then` method of the returned promise. The handler should accept a single argument - the user, which we got from the GitHub's API. Inside the callback simply set the value of the `selectedUser` and change the `loading` status to false.
+  - Sets the `selectedUser` to `null`.
+  - Sets the `loading` status to true.
+  - Invokes the `getUser` method with the current `user` passed as argument. `getUser` will return a promise, add resolve handler for the promise. The handler should accept a single argument - the user, which we got from the GitHub's API. Inside the callback set the value of the `selectedUser` and change the `loading` status to `false`.
 - Inside the template of the `Home` component uncomment the lines in the bottom and add `*ng-if` directive to the `.spinner` element with value `loading` (i.e. the element should be visible when the `loading` status is `true`).
 - In to the `user-details` component add two attributes:
   - `[user]` attribute, which should point to the current `selectedUser`
