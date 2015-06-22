@@ -225,7 +225,7 @@ gulp.task('build.init.prod', function() {
 gulp.task('build.assets.prod', ['build.js.prod'], function () {
   var filterHTML = filter('**/*.html');
   var filterCSS = filter('**/*.css');
-  return gulp.src(['./app/**/*.html', './app/**/*.css', './app/img/**'].concat(PATH.lib.css))
+  return gulp.src(['./app/**/*.html', './app/**/*.css', './app/img/**'].concat(PATH.src.css))
     .pipe(filterHTML)
     .pipe(minifyHTML(HTMLMinifierOpts))
     .pipe(filterHTML.restore())
